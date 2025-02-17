@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-import tweepy
+# import tweepy
 import os
 
 # Twitter API Authentication

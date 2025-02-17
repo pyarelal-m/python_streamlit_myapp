@@ -90,7 +90,7 @@ def main():
 
         # Post to Twitter
         if st.button("Post to Twitter"):
-            api = authenticate()
+            # api = authenticate()
             response = post_to_twitter(api, tweet_text, saved_images)
 
             print(response)

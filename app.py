@@ -23,7 +23,7 @@ def authenticate():
     # api = tweepy.API(auth, wait_on_rate_limit=True, retry_count=3)
     # return api
 
-def post_to_twitter(api, text, image_paths):
+def post_to_twitter( text, image_paths):
     # media_ids = [api.media_upload(img).media_id_string for img in image_paths]
     # api.update_status(status=text, media_ids=media_ids)
     # return "Posted successfully!"
@@ -91,7 +91,7 @@ def main():
         # Post to Twitter
         if st.button("Post to Twitter"):
             # api = authenticate()
-            response = post_to_twitter(api, tweet_text, saved_images)
+            response = post_to_twitter(tweet_text, saved_images)
 
             print(response)
             st.success(response)

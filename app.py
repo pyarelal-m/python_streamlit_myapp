@@ -29,7 +29,7 @@ def post_to_twitter(api, text, image_paths):
     # return "Posted successfully!"
 
     # Generate shareable Twitter link
-    twitter_card_url = "https://pyarelal-m-python-streamlit-myapp-app-z4zgby.streamlit.app/images"
+    twitter_card_url = "https://pyarelal-m-python-streamlit-myapp-app-z4zgby.streamlit.app"
     share_url = f"https://twitter.com/intent/tweet?text={text}&url={twitter_card_url}"
     st.markdown(f"[**Share on X (Twitter)**]({share_url})", unsafe_allow_html=True)
     
@@ -78,7 +78,7 @@ def main():
         st.write("### Resized Images:")
         saved_images = []
         for size, img in resized_images.items():
-            img_path = f"images/resized_{size[0]}x{size[1]}.png"
+            img_path = f"resized_{size[0]}x{size[1]}.png"
             img.save(img_path)
             saved_images.append(img_path)
             st.image(img, caption=f"Size: {size[0]}x{size[1]}", use_column_width=True)
